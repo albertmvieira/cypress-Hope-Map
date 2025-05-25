@@ -1,0 +1,25 @@
+
+# Cypress
+cypress.env.json
+cypress/screenshots/
+cypress/videos/
+temp/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# dependencies
+/node_modules
+
+# compiled output
+/dist
+/tmp
+/out-tsc
