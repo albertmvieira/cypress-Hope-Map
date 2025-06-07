@@ -12,23 +12,11 @@ describe('Mapa', () => {
         })
 
         cy.postOrphanage(orphanage) // Realiza o cadastro do orfanato via API
-        cy.visit('http://localhost:3000/map')
 
-        cy.get('.leaflet-marker-icon').as('mapList')
-        cy.get('@mapList').each((element, index, list) => {
-            cy.get('@mapList').eq(index).click({ force: true })
-            cy.wait(1000)
-            cy.get('.leaflet-popup-content').as('divName')
-            cy.get('@divName').invoke('text').then((text) => {
-                cy.log(text)
-                if (text === orphanage.name) {
-                    cy.get('@mapList').eq(index).as('foundItem')
-                    cy.log('Orfanato encontrado: ' + orphanage.name)
-                }
-            })
-        })
-        cy.get('@foundItem').click({ force: true })
-        cy.contains('.leaflet-popup-content', orphanage.name).find('a').click({ force: true })
-        cy.contains('h1', orphanage.name).should('be.visible')
+        cy.openOrphanage(orphanage.name) // Abre o mapa e clica no orfanato
+
+        cy.contains('h1', orphanage.name).should('be.visible') // Verifica se o nome do orfanato está visível na tela
+
+        cy.googleMapLink(orphanage.position) // Verifica se o link do Google Maps está correto
     })
 })

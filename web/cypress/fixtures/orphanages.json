@@ -2,7 +2,7 @@
   "create": {
     "name": "Orfanato Sol Nascente",
     "description": "Um lar acolhedor para crianças crescerem, aprenderem e encontrarem esperança. Oferecemos atividades educativas, cuidados e apoio emocional todos os dias.",
-    "visiting_hours": "Segunda a sexta, das 9h às 17h",
+    "opening_hours": "Segunda a sexta, das 9h às 17h",
     "open_on_weekends": "Sim",
     "image": "kids-playground-1.png",
     "position": {
@@ -13,7 +13,7 @@
   "duplicate": {
     "name": "Lar Pequenas Estrelas",
     "description": "O Lar Pequenas Estrelas proporciona um ambiente de carinho, educação e criatividade para crianças de diversas origens, ajudando-as a crescer e realizar seus sonhos.",
-    "visiting_hours": "Segunda a sábado, das 10h às 18h",
+    "opening_hours": "Segunda a sábado, das 10h às 18h",
     "open_on_weekends": "Sim",
     "image": "kids-playground-2.png",
     "position": {
@@ -21,21 +21,21 @@
       "longitude": -46.698224544525154
     }
   },
-  "other": {
+  "required": {
     "name": "Refúgio da Esperança",
     "description": "O Refúgio da Esperança dedica-se a oferecer um lar seguro e acolhedor para órfãos, com acesso à educação de qualidade, saúde e programas de desenvolvimento emocional o ano inteiro.",
-    "visiting_hours": "Todos os dias, das 8h às 16h",
+    "opening_hours": "Todos os dias, das 8h às 16h",
     "open_on_weekends": "Não",
-    "image": "kids-playground-2.png",
+    "image": "kids-playground-3.png",
     "position": {
-      "latitude": -23.666183680447396,
-      "longitude": -46.72028303146363
+      "latitude": -23.656183680447396,
+      "longitude": -46.71028303146363
     }
   },
   "map": {
     "name": "Abrigo Futuro Brilhante",
     "description": "No Abrigo Futuro Brilhante, priorizamos o desenvolvimento integral de cada criança, com um ambiente seguro, planos de educação personalizados e atividades recreativas variadas.",
-    "visiting_hours": "Segunda a sexta, das 8h30 às 17h",
+    "opening_hours": "Segunda a sexta, das 8h30 às 17h",
     "open_on_weekends": "Sim",
     "image": "kids-playground-4.png",
       "position": {
@@ -46,7 +46,7 @@
   "other5": {
     "name": "Casa Arco-Íris",
     "description": "A Casa Arco-Íris é um espaço acolhedor e inclusivo, que abraça cada criança com respeito e cuidado, focando no bem-estar emocional, educação e oportunidades futuras.",
-    "visiting_hours": "Terça a domingo, das 9h às 17h",
+    "opening_hours": "Terça a domingo, das 9h às 17h",
     "open_on_weekends": "Não",
     "image": "/images/kids-playground-5.png"
   }

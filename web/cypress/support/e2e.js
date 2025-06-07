@@ -18,3 +18,6 @@ import { addCommands } from 'cypress-mongodb/dist/index-browser';
 addCommands();
 
 import './commands'
+import './views/map'
+import './views/register'
+import './views/components'

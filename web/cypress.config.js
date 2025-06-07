@@ -1,3 +1,5 @@
+require('dotenv').config({ path: './.env' });
+
 const { defineConfig } = require("cypress");
 const { cypressBrowserPermissionsPlugin } = require('cypress-browser-permissions');
 const { configurePlugin } = require ('cypress-mongodb');
@@ -17,10 +19,19 @@ module.exports = defineConfig({
       };
       return config;
     },
+    baseUrl: process.env.BASE_URL,
+    defaultCommandTimeout: 15000,
+    pageLoadTimeout: 30000,
+    video: true,
+    retries:{
+      runMode: 1,
+      openMode: 0
+    },
     env: {
+      baseAPIUrl: process.env.BASE_API_URL,
       mongodb: {
-        uri: 'mongodb+srv://albertmvieira:experience@cluster0.p6cft5w.mongodb.net/Hope?retryWrites=true&w=majority&appName=Cluster0',
-        database: 'Hope'
+        uri: process.env.MONGO_URI,
+        database: process.env.DATABASE_NAME
       }
     }
   },
