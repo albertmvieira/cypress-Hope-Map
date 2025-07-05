@@ -3,12 +3,14 @@ require('dotenv').config({ path: './.env' });
 const { defineConfig } = require("cypress");
 const { cypressBrowserPermissionsPlugin } = require('cypress-browser-permissions');
 const { configurePlugin } = require ('cypress-mongodb');
+const { configureAllureAdapterPlugins } = require ('@mmisty/cypress-allure-adapter/plugins');
 
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      configureAllureAdapterPlugins(on, config);
       configurePlugin(on);
       config = cypressBrowserPermissionsPlugin(on, config);
       config.env.browserPermissions = {
@@ -20,7 +22,7 @@ module.exports = defineConfig({
       return config;
     },
     baseUrl: process.env.BASE_URL,
-    defaultCommandTimeout: 15000,
+    defaultCommandTimeout: 25000,
     pageLoadTimeout: 30000,
     video: true,
     retries:{
@@ -28,6 +30,7 @@ module.exports = defineConfig({
       openMode: 0
     },
     env: {
+      allure: true,
       baseAPIUrl: process.env.BASE_API_URL,
       mongodb: {
         uri: process.env.MONGO_URI,

@@ -14,6 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import '@mmisty/cypress-allure-adapter/support';
+
 import { addCommands } from 'cypress-mongodb/dist/index-browser';
 addCommands();
 

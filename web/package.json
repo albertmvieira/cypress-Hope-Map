@@ -41,6 +41,8 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@faker-js/faker": "^9.8.0",
+    "@mmisty/cypress-allure-adapter": "^3.2.4",
+    "allure-commandline": "^2.34.1",
     "cypress": "^14.3.1",
     "cypress-browser-permissions": "^1.1.0",
     "cypress-mongodb": "^6.2.1"
