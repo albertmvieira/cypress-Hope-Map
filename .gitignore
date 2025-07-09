@@ -25,3 +25,6 @@ Thumbs.db
 
 # Allure results
 allure-results/
+
+# Coverage
+.DS_Store
